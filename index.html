@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Vaporwave</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+    .navbar {
+      width: 580.89px;
+      height: 164px;
+      position: relative;
+    }
+
+    .new-game-button,
+    .play-button {
+      cursor: crosshair;
+    }
+
+    .new-game-button {
+      width: 258.51px;
+      height: 90px;
+      position: absolute;
+      left: 41.92px;
+      top: 45px;
+      background: #3B3B3B;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+    }
+
+    .play-button {
+      width: 179.66px;
+      height: 90px;
+      position: absolute;
+      left: 310.41px;
+      top: 45px;
+      background: #3B3B3B;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+    }
+
+    .backgroundvaporwave {
+      width: 99.81px;
+      height: 100px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: rgba(255, 255, 255, 0);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.60);
+    }
+
+    .background-overlay-vapor {
+      width: 99.81px;
+      height: 100px;
+      position: absolute;
+      left: 5.99px;
+      top: 6px;
+      background: rgba(196, 196, 196, 0);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.60);
+    }
+
+    .icon-vapor {
+      width: 99.81px;
+      height: 100px;
+      position: absolute;
+      left: 10.98px;
+      top: 14px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.60);
+      filter: grayscale(1);
+    }
+
+    .quote-box {
+      width: 477.09px;
+      height: 58px;
+      position: absolute;
+      left: 103.80px;
+      top: 106px;
+      background: linear-gradient(90deg, #9747FF 0%, #7DD286 100%);
+      box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tagline {
+      font-size: 14px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      color: black;
+      text-align: center;
+      cursor: crosshair;
+    }
+
+    .new-game-label,
+    .play-label {
+      position: absolute;
+      font-family: Orbitron, sans-serif;
+      font-weight: 900;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .new-game-label {
+      width: 189.64px;
+      height: 40px;
+      left: 110.79px;
+      top: 64px;
+      font-size: 20px;
+      color: #E2E2E2;
+    }
+
+    .play-label {
+      width: 179.66px;
+      height: 26px;
+      left: 310.41px;
+      top: 64px;
+      font-size: 20px;
+      color: #D4D4D4;
+    }
+
+    .bracket {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .new-game-label:hover .bracket:first-child,
+    .play-label:hover .bracket:first-child {
+      transform: translateX(-5px);
+    }
+
+    .new-game-label:hover .bracket:last-child,
+    .play-label:hover .bracket:last-child {
+      transform: translateX(5px);
+    }
+
+    .icon-plus {
+      position: absolute;
+      left: 19%;
+      top: 85px;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 50px;
+      height: 50px;
+    }
+
+    .plus-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .plus {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s ease;
+      font-family: Orbitron, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #C9C9C9;
+      cursor: pointer;
+    }
+
+    .plus:hover {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="new-game-button"></div>
+    <div class="play-button"></div>
+    <div class="backgroundvaporwave"></div>
+    <div class="background-overlay-vapor"></div>
+    <img class="icon-vapor" src="https://media2.giphy.com/media/j0q2t5XWdbx6qgh0x6/200w.gif?cid=6c09b9525u0x96svb6hlz2k02w3b3odbqdhqgwn6ghjrowzn&ep=v1_gifs_search&rid=200w.gif" alt="placeholder image" />
+    <div class="quote-box">
+      <div class="tagline" data-text="FORGE YOUR FATE IN A WORLD OF CYBERNETICS AND UNTAMED ETHER.">
+        FORGE YOUR FATE IN A WORLD OF CYBERNETICS AND UNTAMED ETHER.
+      </div>
+    </div>
+    <a href="https://example.com/newgame" target="_blank" class="new-game-label">
+      <span class="bracket">[</span>
+      <span class="label-text">NEW GAME</span>
+      <span class="bracket">]</span>
+    </a>
+    <a href="https://example.com/play" target="_blank" class="play-label">
+      <span class="bracket">[</span>
+      <span class="label-text">PLAY</span>
+      <span class="bracket">]</span>
+    </a>
+    <div class="icon-plus">
+      <img class="plus-image" src="https://i.imgur.com/VxmS2m3.png" alt="decorative image" />
+      <span class="plus">+</span>
+    </div>
+  </div>
+  <script>
+    const glitchCharacters = {
+      A: ["4", "@", "^"],
+      O: ["0", "()", "*"],
+      E: ["3", "&", "€"],
+      S: ["$", "5", "z"],
+      I: ["1", "!", "|"],
+      T: ["7", "+", "±"],
+      R: ["Я", "2", "®"],
+    };
+
+    const getRandomGlitchChar = (char) => {
+      const chars = glitchCharacters[char.toUpperCase()] || [char];
+      return chars[Math.floor(Math.random() * chars.length)];
+    };
+
+    const applyGlitchEffect = (element, text) => {
+      const interval = setInterval(() => {
+        if (!element.matches(":hover")) {
+          clearInterval(interval);
+          element.textContent = text;
+          return;
+        }
+        element.textContent = text
+          .split("")
+          .map((char) => (char === " " ? " " : Math.random() > 0.5 ? getRandomGlitchChar(char) : char))
+          .join("");
+      }, 100);
+    };
+
+    document.querySelector(".tagline").addEventListener("mouseenter", (event) => {
+      const element = event.target;
+      const originalText = element.getAttribute("data-text");
+      applyGlitchEffect(element, originalText);
+    });
+  </script>
+</body>
+</html>
